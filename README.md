@@ -14,10 +14,12 @@
 
 專案結構:
 
+'''
 ExchangeAPI
     ├─ Exchange.py (匯率換算)
     ├─ ExRate.py (匯率查詢)
     └─ README.md (程式簡介)
+'''
 
 使用方法:
 
