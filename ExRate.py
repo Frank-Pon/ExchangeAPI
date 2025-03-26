@@ -1,5 +1,8 @@
 import requests
-
+'''
+使用requests庫
+用API的方式將匯率爬下來
+'''
 target = input("請輸入換匯簡寫 ( 例:TWD )：")
 url = 'https://open.er-api.com/v6/latest/USD'
 headers = {
@@ -11,9 +14,6 @@ res = requests.get(url,headers=headers)
 rates = res.json()['rates'][f'{target}']
 update = res.json()['time_last_update_utc']
 status = res.json()['result']
-#time_last_update_utc
-#rates
-#result
 
 if status == 'success':
     print(f'USD to {target} 的匯率約為：{rates:.2f} 新台幣')
